@@ -1,0 +1,120 @@
+<html>
+
+<head>
+    <style src="main.css"></style>
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+    <style>
+        body {
+            font-family: Helvetica;
+        }
+
+        div.board {
+            padding: 10px;
+            margin: 10px;
+            background: #f1f1f1;
+            border: 2px solid #ccc;
+            position: relative;
+            width: 95%;
+            min-height: 400px;
+        }
+
+        div.box {
+            border: 2px solid #000;
+            background-color: #fff;
+            position: absolute;
+            display: inline-block;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        div.box-filled {
+            cursor: none;
+        }
+
+        div.box:hover {
+            border: 2px solid #c96;
+        }
+
+        div.box-text-container {
+            position: absolute;
+            background: transparent;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            z-index: 2;
+        }
+
+        span.box-text {
+            font-size: 16px;
+            font-family: Courier New, Courier, monospace;
+            color: #000;
+        }
+
+        div.box-fill {
+            background-color: #ccc;
+            position: absolute;
+            z-index: 0;
+        }
+
+        div.box-name {
+            font-weight: bold;
+        }
+
+        div.box:hover div.box-name {
+            color: #c96;
+        }
+
+        div.box-completed {
+            background-color: #999;
+            color: #333;
+            border: 1px dotted #333;
+            position: absolute;
+            display: inline-block;
+            cursor: default;
+            user-select: none;
+        }
+
+        button.start-button {
+            font-size: 32px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>FILL ALL THE BOXES</h1>
+
+    <div id="game">
+        <div>
+            <b>Stamina:</b>
+            <span id="player_stamina_max"></span> /
+            <span id="player_stamina_current"></span>
+            (regen
+            <span id="player_stamina_regen"></span>)
+        </div>
+        <div>
+            <b>Health:</b>
+            <span id="player_health_max"></span> /
+            <span id="player_health_current"></span>
+            (regen
+            <span id="player_health_regen"></span>)
+        </div>
+        <div>
+            <b>Power:</b>
+            <span id="player_power"></span>
+            (cost
+            <span id="player_stamina_cost"></span> stamina)
+        </div>
+        <div>
+            <b>Coin:</b>
+            <span id="player_coin"></span>
+        </div>
+
+        <div id="content" class="board">
+
+        </div>
+    </div>
+</body>
+
+</html>
