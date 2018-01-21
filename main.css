@@ -1,3 +1,82 @@
 body {
-    font-family: Helvetica;
+  font-family: Helvetica;
+}
+
+div.board {
+  padding: 10px;
+  margin: 10px;
+  background: #f1f1f1;
+  border: 2px solid #ccc;
+  position: relative;
+}
+
+div.box {
+  border: 2px solid #000;
+  background-color: #fff;
+  position: absolute;
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+}
+
+div.box-filled {
+  cursor: none;
+}
+
+div.box:hover {
+  border: 2px solid #c96;
+}
+
+div.box-text-container {
+  position: absolute;
+  background: transparent;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  z-index: 2;
+}
+
+span.box-text {
+  font-size: 12px;
+  font-family: Courier New, Courier, monospace;
+  color: #000;
+}
+
+div.box-fill {
+  background-color: #ccc;
+  position: absolute;
+  z-index: 0;
+}
+
+div.box-completed div.box-fill {
+  background-color: #6f6;
+}
+
+div.box-name {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+div.box:hover div.box-name {
+  color: #c96;
+}
+
+div.box-completed {
+  background-color: #393;
+  color: #333;
+  border: 1px dotted #333;
+  position: absolute;
+  display: inline-block;
+  cursor: default;
+  user-select: none;
+}
+
+button.start-button {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.label-warning {
+  font-weight: bold;
+  color: red;
 }
