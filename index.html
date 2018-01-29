@@ -9,28 +9,48 @@
 </head>
 
 <body>
-    <h1>FILL ALL THE BOXES</h1>
-
     <div id="game">
-        <div>
-            <b>Stamina:</b>
-            <span id="player_stamina_current"></span> /
-            <span id="player_stamina_max"></span>
+        <div class="stats">
+            <div class="stats-header">Stamina</div>
+            <hr />
+            <span class="stats-number" id="player_stamina_current"></span> /
+            <span class="stats-number" id="player_stamina_max"></span>
+            <hr />
+            <div class="stats-small">
+                TEMP BOOST:
+                <button class="stats-boost" id="max_stamina_boost_btn">MAX +20%</button>
+                <br />
+                <span class="stats-number-small" id="max_stamina_boosts"></span> Left
+            </div>
         </div>
-        <div>
-            <b>Health:</b>
-            <span id="player_health_current"></span> /
-            <span id="player_health_max"></span>
+        <div class="stats">
+            <div class="stats-header">Health</div>
+            <hr />
+            <span class="stats-number" id="player_health_current"></span> /
+            <span class="stats-number" id="player_health_max"></span>
+            <hr />
+            <div class="stats-small">
+                TEMP BOOST:
+                <button class="stats-boost" id="max_health_boost_btn">MAX +20%</button>
+                <br />
+                <span class="stats-number-small" id="max_health_boosts"></span> Left
+            </div>
         </div>
-        <div>
-            <b>Power:</b>
-            <span id="player_power"></span>
-            (cost
-            <span id="player_stamina_cost"></span> stamina)
+        <div class="stats">
+            <div class="stats-header">Power</div>
+            <hr />
+            <span class="stats-number" id="player_power"></span>
+            <hr />
+            <div class="stats-small">
+                cost
+                <span class="stats-number-small" id="player_stamina_cost"></span> stamina
+            </div>
         </div>
-        <div>
-            <b>Coin:</b>
-            <span id="player_coin"></span>
+        <div class="stats">
+            <div class="stats-header">Coin</div>
+            <hr />
+            <span class="stats-number" id="player_coin"></span>
+            <hr /> &nbsp;
         </div>
 
         <div id="content" class="board">

@@ -2,28 +2,87 @@ body {
   font-family: Helvetica;
 }
 
+div.stats {
+  border: 2px solid #666;
+  text-align: center;
+  display: inline-block;
+  width: 120px;
+  max-height: 160px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 8px;
+}
+
+div.stats-header {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.stats-number {
+  font-size: 32px;
+  font-weight: bolder;
+}
+
+.stats-number-small {
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+.stats-small {
+  font-size: 12px;
+  color: #333;
+}
+
+button.stats-boost {
+  border: 1px solid #999;
+  border-radius: 2px;
+  background: #fff;
+}
+
+button.stats-boost:hover {
+  background: #c96;
+  cursor: pointer;
+}
+
+button.stats-boost:disabled {
+  color: #999;
+  background: #f1f1f1;
+  border: 1px solid #ccc;
+}
+
 div.board {
   padding: 10px;
   margin: 10px;
   background: #f1f1f1;
-  border: 2px solid #ccc;
+  border: 0px solid #ccc;
   position: relative;
 }
 
 div.box {
   border: 2px solid #000;
   background-color: #fff;
+  color: #000;
   position: absolute;
   display: inline-block;
   cursor: pointer;
   user-select: none;
 }
 
+div.box-inactive {
+  border: 1px solid #999;
+  background-color: #ccc;
+  color: #999;
+}
+
+div.box-level-exit {
+  border: 2px solid #999;
+}
+
 div.box-filled {
   cursor: none;
 }
 
-div.box:hover {
+div.box-active:hover {
   border: 2px solid #c96;
 }
 
@@ -39,17 +98,16 @@ div.box-text-container {
 span.box-text {
   font-size: 12px;
   font-family: Courier New, Courier, monospace;
-  color: #000;
 }
 
 div.box-fill {
-  background-color: #ccc;
+  background-color: #9f9;
   position: absolute;
   z-index: 0;
 }
 
 div.box-completed div.box-fill {
-  background-color: #6f6;
+  background-color: #6c6;
 }
 
 div.box-name {
@@ -57,7 +115,7 @@ div.box-name {
   font-size: 14px;
 }
 
-div.box:hover div.box-name {
+div.box-active:hover div.box-name {
   color: #c96;
 }
 
@@ -79,4 +137,9 @@ button.start-button {
 .label-warning {
   font-weight: bold;
   color: red;
+}
+
+.label-awesome {
+  font-weight: bold;
+  color: green;
 }

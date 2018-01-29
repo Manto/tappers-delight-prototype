@@ -1,22 +1,28 @@
 PLAYER = {
   stamina_max: 20,
   stamina_current: 20,
-  stamina_regen: 0.2,
+  stamina_regen: 0.3,
   health_max: 20,
   health_current: 20,
-  health_regen: 0.2,
+  health_regen: 0.3,
   health_regen_current: 0,
   health_regen_acceleration: 1,
   power: 5,
   stamina_cost: 1,
-  coin: 0
+  coin: 0,
+  boosts: {
+    max_stamina: 4,
+    max_health: 4
+  }
 };
 
-UNIT = 50;
+UNIT = 60;
 
 BOARD = {
-  box_width: 8,
-  box_height: 10
+  box_width: 12,
+  box_height: 8,
+  boss_width: 2,
+  boss_height: 2
 };
 
 LEVEL_BOXES = [
@@ -73,6 +79,7 @@ LEVEL_BOXES = [
     boost: {
       stamina_max: 1
     },
+    purchase_max: 5,
     box_width: 3,
     box_height: 1,
     box_x: 0,
@@ -86,6 +93,8 @@ LEVEL_BOXES = [
     boost: {
       health_max: 1
     },
+    purchase_max: 5,
+    purchase_count: 0,
     box_width: 3,
     box_height: 1,
     box_x: 0,
@@ -99,6 +108,7 @@ LEVEL_BOXES = [
     boost: {
       power: 1
     },
+    purchase_max: 5,
     box_width: 3,
     box_height: 1,
     box_x: 0,
